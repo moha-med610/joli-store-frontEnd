@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "joli-store",
-=======
-  "name": "joli-admin",
->>>>>>> fe9447d1d64e502a2f4673813b24237f659e29fa
   "private": true,
   "version": "0.0.0",
   "type": "module",
