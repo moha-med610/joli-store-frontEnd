@@ -7,26 +7,7 @@ const AddTestimonial = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [testimonials, setTestimonials] = useState([]); // لتخزين الشهادات
-
-  // تحميل الشهادات عند تحميل الصفحة
-  useEffect(() => {
-    const fetchTestimonials = async () => {
-      try {
-        const response = await fetch("https://e-commerce-joli-backend.onrender.com/api/testimonial");
-        const data = await response.json();
-
-        if (response.ok) {
-          setTestimonials(data.data); // تخزين الشهادات في الحالة
-        } else {
-          setError(data.message || "فشل في جلب الشهادات.");
-        }
-      } catch (error) {
-        setError("حدث خطأ أثناء الاتصال بالـ API: " + error.message);
-      }
-    };
-
-    fetchTestimonials(); // جلب الشهادات عند تحميل الصفحة
-  }, []);
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -47,7 +28,6 @@ const AddTestimonial = () => {
 
       if (response.ok) {
         const newTestimonial = await response.json();
-        setTestimonials([newTestimonial, ...testimonials]); // إضافة الشهادة الجديدة للقائمة
         setSubmitted(true);
         setName("");
         setFeedback("");
