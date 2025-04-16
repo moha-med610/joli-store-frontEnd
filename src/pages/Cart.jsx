@@ -33,8 +33,8 @@ const Cart = () => {
   };
 
   return (
-    <section className="min-h-screen bg-pink-50 py-10 mt-14">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="min-h-screen bg-pink-50 py-10">
+      <div className="max-w-7xl mx-auto px-4 mt-16">
         <h2 className="text-3xl font-bold text-center text-pink-700 mb-6">السلة</h2>
 
         <div className="bg-white shadow-lg rounded-lg p-6 space-y-6">
