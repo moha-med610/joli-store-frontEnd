@@ -6,7 +6,7 @@ const AddTestimonial = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [testimonials, setTestimonials] = useState([]); // لتخزين الشهادات
+
   
 
   const handleSubmit = async (e) => {
