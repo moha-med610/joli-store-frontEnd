@@ -38,12 +38,18 @@ const ProductDetails = () => {
             </h2>
             <p className="text-lg font-bold text-black">{product.price} EGP</p>
             <p className="text-gray-600">{product.description}</p>
-            <Link to="/cart">
+            <a
+              href={`https://wa.me/201020130763?text=${encodeURIComponent(
+                `I want to buy this product => \nID: ${product._id}\nName: ${product.title}\nPrice: ${product.price} جنيه`
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <button className="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-full mt-4 flex items-center gap-2 text-sm font-medium transition duration-300">
                 <ShoppingCart size={18} />
                 أضف للسلة
               </button>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

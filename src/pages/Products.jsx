@@ -39,8 +39,8 @@ const Products = () => {
   return (
     <div>
       <Slider />
-      <Search />
       <section id="products" className="text-center my-16 scroll-mt-24">
+      <Search />
         <h1 className="text-5xl font-bold text-pink-700 font-mono">المنتجات</h1>
       </section>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4 md:px-16 mt-24">

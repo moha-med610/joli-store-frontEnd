@@ -46,12 +46,12 @@ const Nav = () => {
             >
               Products
             </Link>
-            <Link
+            {/* <Link
               to="/cart"
               className="text-black hover:text-slate-700 font-medium"
             >
               <LuShoppingCart className="text-2xl" />
-            </Link>
+            </Link> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -104,13 +104,13 @@ const Nav = () => {
           >
             Products
           </Link>
-          <Link
+          {/* <Link
             to="/cart"
             className="text-black hover:text-slate-700 font-bold flex items-center"
           >
             <LuShoppingCart className="text-2xl my-2 mr-3" />
             Cart
-          </Link>
+          </Link> */}
         </div>
       )}
     </nav>

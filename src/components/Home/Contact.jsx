@@ -11,7 +11,6 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
 
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
@@ -22,16 +21,13 @@ const Contact = () => {
     setResponseMessage("");
 
     try {
-      const response = await fetch(
-        "http://localhost:3001/api/sendEmail",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch("https://e-commerce-joli-backend.onrender.com/api/message", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
       const data = await response.json();
 
@@ -99,15 +95,16 @@ const Contact = () => {
                 className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400"
               />
             </div>
-            {responseMessage && (
-              <div className="text-center text-green-500 font-semibold">
-                {responseMessage}
-              </div>
-            )}
-            <button
-              type="submit"
-              
+            <div
+              className={`text-center font-semibold ${
+                responseMessage.includes("success")
+                  ? "text-green-500"
+                  : "text-red-500"
+              }`}
             >
+              {responseMessage}
+            </div>
+            <button type="submit">
               {loading ? <Button /> : <ButtonSent />}
             </button>
           </form>
