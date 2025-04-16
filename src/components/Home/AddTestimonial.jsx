@@ -12,7 +12,7 @@ const AddTestimonial = () => {
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/testimonial");
+        const response = await fetch("https://e-commerce-joli-backend.onrender.com/api/testimonial");
         const data = await response.json();
 
         if (response.ok) {
@@ -34,7 +34,7 @@ const AddTestimonial = () => {
     setError(null); // إعادة تعيين الخطأ عند بدء إرسال البيانات
 
     try {
-      const response = await fetch("http://localhost:3001/api/testimonial", {
+      const response = await fetch("https://e-commerce-joli-backend.onrender.com/api/testimonial", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

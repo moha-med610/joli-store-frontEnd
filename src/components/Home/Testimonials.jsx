@@ -8,7 +8,7 @@ const Testimonials = () => {
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/testimonial");
+        const response = await fetch("https://e-commerce-joli-backend.onrender.com/api/testimonial");
         const data = await response.json();
 
         if (response.ok) {

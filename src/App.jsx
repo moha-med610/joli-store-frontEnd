@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
@@ -27,3 +28,17 @@ function App() {
 }
 
 export default App;
+=======
+
+
+function App() {
+
+  return (
+    <>
+
+    </>
+  )
+}
+
+export default App
+>>>>>>> fe9447d1d64e502a2f4673813b24237f659e29fa
