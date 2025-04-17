@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ShoppingCart } from "lucide-react";
 
-const Cards = ({ id, image, title, description, price, addToCart }) => {
+const Cards = ({ id, image, title, description, price }) => {
 
   return (
     <div className="w-full max-w-sm bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-transform duration-300 hover:scale-[1.03]">
