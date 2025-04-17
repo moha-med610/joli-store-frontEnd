@@ -13,7 +13,7 @@ const Cards = ({ id, image, title, description, price }) => {
           className="w-full h-60 object-cover rounded-2xl"
         />
         <h3 className="text-2xl font-bold text-pink-600 mt-5">{title}</h3>
-        <p className="text-gray-600 mt-3 text-sm leading-relaxed line-clamp-3">
+        <p className="text-gray-600 mt-3 text-sm leading-relaxed line-clamp-1">
           {description}
         </p>
         <p className="text-xl font-semibold text-pink-500 mt-3">{price} EGP</p>

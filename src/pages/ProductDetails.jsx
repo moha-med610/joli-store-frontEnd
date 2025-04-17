@@ -23,7 +23,7 @@ const ProductDetails = () => {
       <div className="max-w-5xl mx-auto mt-28 px-4 ">
         <div className="flex flex-col md:flex-row items-start gap-10">
           {/* الصورة */}
-          <div className="md:w-1/2 w-full">
+          <div className="md:w-1/2 w-full hover:scale-105 ease-in-out transition-all">
             <img
               src={product.images}
               alt={product.title}
@@ -37,7 +37,11 @@ const ProductDetails = () => {
               {product.title}
             </h2>
             <p className="text-lg font-bold text-black">{product.price} EGP</p>
-            <p className="text-gray-600">{product.description}</p>
+            <div className="w-full">
+              <p className="text-gray-600 text-sm leading-relaxed break-words">
+                {product.description}
+              </p>
+            </div>
             <a
               href={`https://wa.me/201020130763?text=${encodeURIComponent(
                 `I want to buy this product => \nID: ${product._id}\nName: ${product.title}\nPrice: ${product.price} جنيه`
