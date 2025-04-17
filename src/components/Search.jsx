@@ -25,19 +25,21 @@ const Search = () => {
       );
       const data = await response.json();
 
-      console.log("Data from backend:", data.data); // إضافة هذه السطر لعرض البيانات في الـ console
-
       if (response.ok) {
-        if (data.length === 0) {
+        if (data.data.length === 0) {
+          setResults([]);
           setError("لا توجد نتائج للبحث.");
         } else {
           setResults(data.data);
+          setError(""); // نمسح رسالة الخطأ لو فيه نتائج
         }
       } else {
+        setResults([]);
         setError("حدث خطأ أثناء جلب البيانات من الخادم.");
       }
     } catch (err) {
       setError("حدث خطأ أثناء البحث. يرجى المحاولة لاحقًا.");
+      setResults([]);
     } finally {
       setLoading(false);
     }
@@ -70,35 +72,34 @@ const Search = () => {
         <p className="text-center mt-4 text-gray-500">جارِ البحث...</p>
       )}
 
-      {error && <p className="text-center mt-4 text-red-500">{error}</p>}
-
       <div className="mt-6 overflow-y-auto max-h-96 space-y-4">
         {" "}
-        {/* إضافة overflow-y-auto مع max-h-96 */}
         {results.length > 0
           ? results.map((item) => (
               <div
                 key={item._id}
-                className="bg-white p-4 rounded-lg shadow-lg flex items-center space-x-4 cursor-pointer"
+                className="bg-white p-4 rounded-lg shadow-lg flex items-center space-x-4 cursor-pointer hover:scale-105 transition-all mx-10"
                 onClick={() => navigate(`/products/${item._id}`)}
               >
                 <img
-                  src={item.images[0]} // تأكد من أن هذا المسار صحيح
+                  src={item.images?.[0] || "https://via.placeholder.com/64"}
                   alt={item.title}
                   className="w-16 h-16 object-cover rounded-lg"
                 />
-                <div>
-                  <h3 className="text-xl font-semibold text-pink-600">
+                <div className="flex-1 overflow-hidden">
+                  <h3 className="text-xl font-semibold text-pink-600 truncate">
                     {item.title}
                   </h3>
-                  <p className="text-gray-500">{item.description}</p>
+                  <p className="text-gray-500 line-clamp-1">
+                    {item.description}
+                  </p>
                   <p className="mt-2 text-lg font-semibold text-pink-700">
                     {item.price} EGP
                   </p>
                 </div>
               </div>
             ))
-          : query && (
+            : query && (
               <p className="text-center text-gray-500">
                 لا توجد نتائج للبحث عن "{query}"
               </p>
