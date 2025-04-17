@@ -4,8 +4,8 @@ import { ShoppingCart } from "lucide-react";
 
 const Cards = ({ id, image, title, description, price, addToCart }) => {
   const shortDescription =
-    description.length > 100
-      ? description.substring(0, 100) + "..."
+    description.length > 50
+      ? description.substring(0, 50) + "..."
       : description;
 
   const handleAddToCart = () => {
