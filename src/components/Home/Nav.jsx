@@ -8,7 +8,7 @@ const Nav = () => {
 
   return (
     
-    <nav className="bg-black bg-opacity-15 shadow-lg fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%]  z-50 rounded-3xl">
+    <nav className="bg-black bg-opacity-55 shadow-lg fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%]  z-50 rounded-3xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -18,7 +18,7 @@ const Nav = () => {
               alt="Logo"
               className="h-10 w-auto rounded-full"
             />
-            <span className="ml-2 text-black text-xl font-mono">
+            <span className="ml-2 text-white text-xl font-mono">
               JOLI COSMETICS
             </span>
           </div>
@@ -28,21 +28,21 @@ const Nav = () => {
             <Link
           
               to="/"
-              className="text-black hover:text-slate-700 font-medium"
+              className="text-white hover:text-slate-700 font-medium"
             >
               Home
             </Link>
             <Link
              
               to="/about"
-              className="text-black hover:text-slate-700 font-medium"
+              className="text-white hover:text-slate-700 font-medium"
             >
               About
             </Link>
             <Link
             
               to="/products"
-              className="text-black hover:text-slate-700 font-medium"
+              className="text-white hover:text-slate-700 font-medium"
             >
               Products
             </Link>
