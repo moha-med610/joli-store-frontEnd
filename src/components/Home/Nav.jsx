@@ -58,7 +58,7 @@ const Nav = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-black focus:outline-none"
+              className="text-white focus:outline-none"
             >
               <svg
                 className="w-6 h-6"
@@ -85,21 +85,21 @@ const Nav = () => {
         <div className="md:hidden px-4 pb-4 space-y-2">
           <Link
             to="/"
-            className="block py-2 text-black hover:text-slate-700"
+            className="block py-2 text-white hover:text-slate-700"
             onClick={() => setIsOpen(false)}
           >
             Home
           </Link>
           <Link
             to="/about"
-            className="block py-2 text-black hover:text-slate-700"
+            className="block py-2 text-white hover:text-slate-700"
             onClick={() => setIsOpen(false)}
           >
             About
           </Link>
           <Link
             to="/products"
-            className="block py-2 text-black hover:text-slate-700"
+            className="block py-2 text-white hover:text-slate-700"
             onClick={() => setIsOpen(false)}
           >
             Products
