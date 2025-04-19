@@ -3,6 +3,7 @@ import Cards from "../components/Products/Cards";
 import Loading from "../components/Loading";
 import Slider from "../components/Products/Slider";
 import Search from "../components/Search";
+import Footer from "../components/Home/Footer"
 
 const Products = () => {
   const [data, setData] = useState([]);
@@ -43,7 +44,7 @@ const Products = () => {
       <Search />
         <h1 className="text-5xl font-bold text-pink-700 font-mono">المنتجات</h1>
       </section>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4 md:px-16 mt-24">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4 md:px-16 my-24">
         {data.map((item) => (
           <Cards
             key={item._id}
@@ -55,6 +56,7 @@ const Products = () => {
           />
         ))}
       </div>
+      <Footer />
     </div>
   );
 };
