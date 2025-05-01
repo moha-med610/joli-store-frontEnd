@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Button from "./Button";
 import ButtonSent from "./ButtonSent";
 
@@ -38,7 +38,7 @@ const Contact = () => {
         setResponseMessage(data.error || "Failed to send email");
       }
     } catch (error) {
-      setResponseMessage("An error occurred. Please try again.");
+      setResponseMessage("An error occurred. Please try again.", error);
     }
     setLoading(false);
   };
@@ -104,9 +104,7 @@ const Contact = () => {
             >
               {responseMessage}
             </div>
-            <button type="submit">
               {loading ? <Button /> : <ButtonSent />}
-            </button>
           </form>
 
           {/* Contact Info */}

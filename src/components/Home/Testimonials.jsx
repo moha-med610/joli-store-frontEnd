@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Loading from "../Loading";
 
 const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -28,7 +29,7 @@ const Testimonials = () => {
 
   if (loading) {
     return (
-      <div className="text-center text-gray-600">جاري تحميل الشهادات...</div>
+      <Loading />
     );
   }
 

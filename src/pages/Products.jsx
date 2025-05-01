@@ -4,15 +4,23 @@ import Loading from "../components/Loading";
 import Slider from "../components/Products/Slider";
 import Search from "../components/Search";
 import Footer from "../components/Home/Footer"
+import Select from "../components/Products/Select";
 
 const Products = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [category, setCategory] = useState("");
+
+  const categories = ["منتجات العنايه الشعر", "منتجات العنايه البشره", "منتجات العنايه بالجسم"]
+
+  const url = category
+        ? `https://e-commerce-joli-backend.onrender.com/api/products?category=${category}`
+        : `https://e-commerce-joli-backend.onrender.com/api/products`;
 
   const getData = async () => {
     try {
-      const response = await fetch("https://e-commerce-joli-backend.onrender.com/api/products");
+      const response = await fetch(url);
       const json = await response.json();
       setData(json.data);
     } catch (error) {
@@ -25,7 +33,7 @@ const Products = () => {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [category]);
 
   if (loading) return <Loading />;
 
@@ -42,6 +50,12 @@ const Products = () => {
       <Slider />
       <section id="products" className="text-center my-16 scroll-mt-24">
       <Search />
+      <div className="flex justify-center items-center mt-4 mb-8">
+        <Select 
+          categories={categories}
+          setCategory={setCategory}
+        />
+        </div>
         <h1 className="text-5xl font-bold text-pink-700 font-mono">المنتجات</h1>
       </section>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4 md:px-16 my-24">
@@ -53,6 +67,7 @@ const Products = () => {
             title={item.title}
             description={item.description}
             price={item.price}
+            category={item.category}
           />
         ))}
       </div>

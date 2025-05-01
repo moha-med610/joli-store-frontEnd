@@ -9,7 +9,6 @@ const Search = () => {
 
   const navigate = useNavigate();
 
-  // دالة البحث التي تتواصل مع الباك اند
   const searchItems = async (searchQuery) => {
     if (!searchQuery) {
       setResults([]);
@@ -31,7 +30,7 @@ const Search = () => {
           setError("لا توجد نتائج للبحث.");
         } else {
           setResults(data.data);
-          setError(""); // نمسح رسالة الخطأ لو فيه نتائج
+          setError(""); 
         }
       } else {
         setResults([]);
@@ -51,7 +50,7 @@ const Search = () => {
     }, 500);
 
     return () => clearTimeout(delayDebounceFn);
-  }, [query]); // التفاعل مع التغيير في الـ query
+  }, [query]);
 
   return (
     <div className="w-full max-w-lg mx-auto mt-8">
