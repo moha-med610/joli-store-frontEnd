@@ -46,7 +46,7 @@ const AddTestimonial = () => {
     <section className="bg-pink-100 py-20">
       <div className="max-w-3xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-pink-700 mb-10">
-          شاركينا رأيك 💖
+          شاركينا رأيك 
         </h2>
 
         {!submitted ? (

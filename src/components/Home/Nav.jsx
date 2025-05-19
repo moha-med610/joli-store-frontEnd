@@ -1,7 +1,7 @@
 // Navbar.jsx
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { LuShoppingCart } from "react-icons/lu";
+// import { LuShoppingCart } from "react-icons/lu";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,21 +28,21 @@ const Nav = () => {
             <Link
           
               to="/"
-              className="text-white hover:text-slate-700 font-medium"
+              className="text-white hover:text-pink-700 font-medium"
             >
               Home
             </Link>
             <Link
              
               to="/about"
-              className="text-white hover:text-slate-700 font-medium"
+              className="text-white hover:text-pink-700 font-medium"
             >
               About
             </Link>
             <Link
             
               to="/products"
-              className="text-white hover:text-slate-700 font-medium"
+              className="text-white hover:text-pink-700 font-medium"
             >
               Products
             </Link>
@@ -85,21 +85,21 @@ const Nav = () => {
         <div className="md:hidden px-4 pb-4 space-y-2">
           <Link
             to="/"
-            className="block py-2 text-white hover:text-slate-700"
+            className="block py-2 text-white hover:text-pink-700"
             onClick={() => setIsOpen(false)}
           >
             Home
           </Link>
           <Link
             to="/about"
-            className="block py-2 text-white hover:text-slate-700"
+            className="block py-2 text-white hover:text-pink-700"
             onClick={() => setIsOpen(false)}
           >
             About
           </Link>
           <Link
             to="/products"
-            className="block py-2 text-white hover:text-slate-700"
+            className="block py-2 text-white hover:text-pink-700"
             onClick={() => setIsOpen(false)}
           >
             Products

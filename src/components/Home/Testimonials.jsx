@@ -41,7 +41,7 @@ const Testimonials = () => {
     <section className="bg-white py-20 text-right">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-pink-700 mb-12">
-          آراء عملائنا 💬
+          آراء عملائنا 
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8">

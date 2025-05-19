@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "./Button";
 import ButtonSent from "./ButtonSent";
+import { TfiEmail } from "react-icons/tfi";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -21,13 +22,16 @@ const Contact = () => {
     setResponseMessage("");
 
     try {
-      const response = await fetch("https://e-commerce-joli-backend.onrender.com/api/message", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://e-commerce-joli-backend.onrender.com/api/message",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await response.json();
 
@@ -46,8 +50,9 @@ const Contact = () => {
   return (
     <section className="bg-pink-50 py-20">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-pink-700 mb-12 text-center">
-          تواصلي معنا 💌
+        <h2 className="text-4xl md:text-5xl w-auto font-bold text-pink-700 mb-12 text-center flex justify-center items-center gap-4">
+          <TfiEmail className="text-pink-700 text-5xl" />
+          تواصلي معنا
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12 bg-white shadow-xl rounded-3xl p-8 md:p-12">
@@ -104,7 +109,7 @@ const Contact = () => {
             >
               {responseMessage}
             </div>
-              {loading ? <Button /> : <ButtonSent />}
+            {loading ? <Button /> : <ButtonSent />}
           </form>
 
           {/* Contact Info */}
