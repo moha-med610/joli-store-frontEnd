@@ -1,7 +1,7 @@
 // Navbar.jsx
 import { Link } from "react-router-dom";
 import { useState } from "react";
-// import { LuShoppingCart } from "react-icons/lu";
+import { LuShoppingCart } from "react-icons/lu";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,30 +28,30 @@ const Nav = () => {
             <Link
           
               to="/"
-              className="text-white hover:text-pink-700 font-medium"
+              className="text-white hover:text-pink-500 font-medium"
             >
               Home
             </Link>
             <Link
              
               to="/about"
-              className="text-white hover:text-pink-700 font-medium"
+              className="text-white hover:text-pink-500 font-medium"
             >
               About
             </Link>
             <Link
             
               to="/products"
-              className="text-white hover:text-pink-700 font-medium"
+              className="text-white hover:text-pink-500 font-medium"
             >
               Products
             </Link>
-            {/* <Link
+            <Link
               to="/cart"
-              className="text-black hover:text-slate-700 font-medium"
+              className="text-white hover:text-pink-500 font-medium"
             >
               <LuShoppingCart className="text-2xl" />
-            </Link> */}
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -85,32 +85,32 @@ const Nav = () => {
         <div className="md:hidden px-4 pb-4 space-y-2">
           <Link
             to="/"
-            className="block py-2 text-white hover:text-pink-700"
+            className="block py-2 text-white hover:text-pink-500"
             onClick={() => setIsOpen(false)}
           >
             Home
           </Link>
           <Link
             to="/about"
-            className="block py-2 text-white hover:text-pink-700"
+            className="block py-2 text-white hover:text-pink-500"
             onClick={() => setIsOpen(false)}
           >
             About
           </Link>
           <Link
             to="/products"
-            className="block py-2 text-white hover:text-pink-700"
+            className="block py-2 text-white hover:text-pink-500"
             onClick={() => setIsOpen(false)}
           >
             Products
           </Link>
-          {/* <Link
+          <Link
             to="/cart"
-            className="text-black hover:text-slate-700 font-bold flex items-center"
+            className="text-white hover:text-pink-500 font-semibold flex items-center"
           >
-            <LuShoppingCart className="text-2xl my-2 mr-3" />
+            <LuShoppingCart className="my-2 mr-3"  size={25} />
             Cart
-          </Link> */}
+          </Link>
         </div>
       )}
     </nav>
