@@ -28,23 +28,23 @@ const Nav = () => {
             <Link
           
               to="/"
-              className="text-white hover:text-pink-500 font-medium"
+              className="text-white hover:text-pink-500 font-mono"
             >
-              Home
+              الرئيسية
             </Link>
             <Link
              
               to="/about"
-              className="text-white hover:text-pink-500 font-medium"
+              className="text-white hover:text-pink-500 font-mono"
             >
-              About
+              من نحن؟
             </Link>
             <Link
             
               to="/products"
-              className="text-white hover:text-pink-500 font-medium"
+              className="text-white hover:text-pink-500 font-mono"
             >
-              Products
+              المنتجات
             </Link>
             <Link
               to="/cart"
@@ -88,28 +88,28 @@ const Nav = () => {
             className="block py-2 text-white hover:text-pink-500"
             onClick={() => setIsOpen(false)}
           >
-            Home
+            الرئيسية
           </Link>
           <Link
             to="/about"
             className="block py-2 text-white hover:text-pink-500"
             onClick={() => setIsOpen(false)}
           >
-            About
+            من نحن؟
           </Link>
           <Link
             to="/products"
             className="block py-2 text-white hover:text-pink-500"
             onClick={() => setIsOpen(false)}
           >
-            Products
+            المنتجات
           </Link>
           <Link
             to="/cart"
-            className="text-white hover:text-pink-500 font-semibold flex items-center"
+            className="text-white hover:text-pink-500 font-mono flex items-center"
           >
-            <LuShoppingCart className="my-2 mr-3"  size={25} />
-            Cart
+            <LuShoppingCart className="my-2 mr-3 font-mono"  size={20} />
+            عربة التسوق
           </Link>
         </div>
       )}
