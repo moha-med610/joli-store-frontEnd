@@ -10,7 +10,7 @@ const About = () => {
         <p className="text-gray-700 text-lg sm:text-xl leading-relaxed mb-10">
           في <span className="font-semibold text-pink-600">JOLI COSMETICS</span>، إحنا بنؤمن إن كل ست تستحق الجمال
           الطبيعي والإشراقة اللي تعكس شخصيتها. منتجاتنا مصنوعة بعناية فائقة ومكونات طبيعية مدروسة بعناية عشان
-          توفّرلكي أفضل تجربة للعناية بالبشرة بدون أي ضرر أو مواد كيميائية قاسية.
+          توفّر لكي أفضل تجربة للعناية بالبشرة بدون أي ضرر أو مواد كيميائية قاسية.
         </p>
 
         <div className="grid md:grid-cols-3 gap-8 mt-10 text-left">
